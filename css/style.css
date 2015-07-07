@@ -48,15 +48,33 @@ body {
 /*------- Skills rings-------*/
 .heading
 {
+	position:relative;
 	color:#292929;
-	border-bottom: 3.5px solid #E1E1E1;
-	width: 130px;
+	width: 150px;
 	margin: 0 auto;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	text-shadow: 0px 0px 1px #292929;
 	text-align: center;
 	padding-bottom: 10px;
+}
+.heading:before{
+	 content: "";
+  	position: absolute;
+  	width: 100%;
+  	height: 3px;
+  	bottom: 0;
+  	left: 0;
+  	background: #E1E1E1;
+  	visibility: hidden;
+  	border-radius: 5px;
+  	transform: scaleX(0);
+  	transition: .25s linear;
+}
+.heading:hover:before,
+.heading:focus:before {
+	visibility: visible;
+	transform:scaleX(1);
 }
 .para
 {
@@ -65,7 +83,7 @@ body {
 	text-align: center;
 }
 .centertxt {
-	width: 85%;
+	width: 72%;
 	margin: 0 auto;
 }
 .text-light
@@ -170,7 +188,7 @@ body {
 
 /*-------------Timeline-----*/
 .exper {
-padding: 4em 0em;
+padding: 3em 0em;
 }
 .timeline-label h4 {
     margin-top: 0;
@@ -302,22 +320,56 @@ margin-bottom: 1.34em;
 	margin: 3em 0em;
 }
 /*******/
-.contact {
-	background: #F6F6F6;
-	padding: 6em 0em 2em 0em;
+.interests {
+	
+	padding: 5em 0em 2em 0em;
 }
 .left-form,.right-form{
 	float:left;
 	margin:22px 28px;
 	width:60%;
 }
-.contact form {
+.interests form {
 	padding-top: 2em;
+}
+.ins1:hover{
+	background-color: #9ad2cb;
+  	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+	color:#ffffff;
+}
+.ins2:hover{
+	background-color: #96ec74;
+  	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+	color:#ffffff;
+}
+.ins3:hover{
+	background-color: #7D78F3;
+  	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+	color:#ffffff;
+}
+.ins4:hover{
+
+	background-color: #f0c55e;
+  	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+	color:#ffffff;
 }
 .left-form li {
 	display: block;
 	color: #4D4949;
-	border: 2px solid #CBD0D4;
+	cursor: pointer;
+	/*border: 2px solid #CBD0D4;*/
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -325,16 +377,14 @@ margin-bottom: 1.34em;
 	margin: 15px 0px;
 	background: #fff;
 }
-.left-form li:hover{
-	border:2px solid #8DD4FF;
-	color: #343434;
+
+.left-form .para{
+	color: #6C6C6C;
+    padding: 0em 4em 2em 0em;
+    text-align: center;
 }
-.left-form li:focus{
-	border:2px solid #8DD4FF;
-}
-.left-form li:active{
-		border:2px solid #8DD4FF;
-}
+
+
 
 .left-form input[type=text],.left-form input[type=email],.left-form textarea {
 	float:right;
@@ -361,6 +411,21 @@ textarea
 .right-form{
 	float:right;
 	width: 25%;
+}
+
+.right-form li{
+	color:#CCCCCC;
+	margin: 15px ;
+	opacity: 0.5;
+	cursor:pointer;
+}
+.right-form li:hover{
+	color:#ffd700;
+	-webkit-transition: background-color 1s ease-out;
+  	-moz-transition: background-color 1s ease-out;
+  	-o-transition: background-color 1s ease-out;
+  	transition: background-color 1s ease-out;
+
 }
 .icon {
 	height: 28px;
@@ -469,7 +534,7 @@ textarea
 	background: #007BB6 url('../images/icon4.png') no-repeat 14px 12px;
 }
 .soc_icons ul li a.icon5{
-	background: #FF0084 url('../images/icon5.png') no-repeat 12px 18px;
+	background: #FF0084 url('../images/logo.png') no-repeat 12px 18px;
 }
 .soc_icons ul li a:hover{
 	zoom: 1;
@@ -590,7 +655,7 @@ textarea
 	.group_3 {
 	padding: 1em 0em 1em 0em;
 	}
-	.contact {
+	.interests {
 	padding: 4em 0em 2em 0em;
 	}
 	.group_2 {
@@ -696,7 +761,7 @@ textarea
 	.soc_icons ul li a.icon5 {
 	background: #FF0084 url('../images/icon5.png') no-repeat 11px 16px;
 	}
-	.contact {
+	.interests {
 	padding: 2em 0em;
 	}
 	ul.slimmenu li .sub-collapser:before {
@@ -729,10 +794,10 @@ textarea
 	{
 		display:none;
 	}
-	.contact form {
+	.interests form {
 	padding-top: 0em;
 	}
-	.contact {
+	.interests {
 	padding: 1.2em 0em 2em 0em;
 	}
 	.header {
@@ -849,7 +914,7 @@ textarea
 	.right-form p {
 	padding: 0.5em 0em;
 	}
-	#contact > div > form > div.right-form > div {
+	#interests > div > form > div.right-form > div {
 	margin-top: 1em;
 	}
 	#top-footer > div:nth-child(2) {
