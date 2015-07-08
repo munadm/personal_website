@@ -332,6 +332,9 @@ margin-bottom: 1.34em;
 .interests form {
 	padding-top: 2em;
 }
+.interests li > div{
+	padding: 8px;
+}
 .ins1:hover{
 	background-color: #9ad2cb;
   	-webkit-transition: background-color 0.5s ease-out;
@@ -415,12 +418,14 @@ textarea
 
 .right-form li{
 	color:#CCCCCC;
-	margin: 15px ;
+	padding: 8px;
+	margin: 15px 0px;
 	opacity: 0.5;
 	cursor:pointer;
 }
 .right-form li:hover{
 	color:#ffd700;
+	opacity: 1;
 	-webkit-transition: background-color 1s ease-out;
   	-moz-transition: background-color 1s ease-out;
   	-o-transition: background-color 1s ease-out;
@@ -626,6 +631,13 @@ textarea
 	border: none;
 	text-indent: 100%;
 	background: url(../images/top.png) no-repeat right top;
+}
+
+.group_3_social img{
+	float:left;
+	height : 250px;
+	padding : 0px 8px;
+	margin-left: 25px;
 }
 /******response***********/
 @media only screen and (max-width: 1440px)
