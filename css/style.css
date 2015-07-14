@@ -103,24 +103,30 @@ body {
  .outer-circle {
  	display: block;
    background: #005A00;
+   width:300px; /* You can define it by % also */
+   height:300px; /* You can define it by % also */
+   position:relative;
+   /*border:1px solid black;*/
    border-radius: 50%;
-   height: 300px;
-   width: 300px;
-   position: relative;
    /* 
     Child elements with absolute positioning will be 
     positioned relative to this div 
    */
  }
  .inner-circle {
-    position: absolute;
     background: #FF0000;
-    border-radius: 50%;
+    /*border-radius: 50%;
     height: 175px;
     width: 175px;
     top: 50%;
     left: 50%;
-    margin: -88px 0px 0px -87px;
+    margin: -88px 0px 0px -87px;*/
+    top: 25%; left:25%; /* of the container */
+    width:50%; /* of the container */
+    height:50%; /* of the container */
+    position: relative;
+    border:1px solid black;
+    border-radius: 50%;
    /* 
     Offset the position correctly with
     minus half of the width and minus half of the height 
@@ -636,8 +642,11 @@ textarea
 .group_3_social img{
 	float:left;
 	height : 250px;
-	padding : 0px 8px;
+	padding : 8px 8px;
 	margin-left: 25px;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 /******response***********/
 @media only screen and (max-width: 1440px)
@@ -779,6 +788,16 @@ textarea
 	ul.slimmenu li .sub-collapser:before {
 	content: url(../images/down1.png);
 	}
+	.outercircle{
+		width:195px; /* You can define it by % also */
+   		height:195px;
+   		margin: 0 auto;
+
+	}
+	.group_3_social img{
+		float: none;
+		height : 150px;
+	}
 }
 @media only screen and (max-width: 640px)
 {
@@ -864,6 +883,12 @@ textarea
 	width: 240px;
 	height: 200px;
 	}
+	.outer-circle{
+		float: none;
+		width: 225px;
+		height: 225px;
+	}
+	
 }
 @media only screen and (max-width: 480px)
 {
@@ -935,6 +960,15 @@ textarea
 	#top-footer > div:nth-child(3) {
 	display: none;
 	}
+	.group_3_social img{
+		float:none;
+		height:65px;
+	}
+	.outer-circle{
+		float: none;
+		width: 185px;
+		height: 185px;
+	}
 }
 @media only screen and (max-width: 320px)
 {
@@ -989,7 +1023,7 @@ textarea
 	.right-form > div > ul > li:nth-child(5) {
 	display: none;
 	}
-	.owl-buttons {
+	.buttons {
 	display: none;
 	}
 	.chart canvas {
