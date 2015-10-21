@@ -83,8 +83,8 @@ body {
 	text-align: center;
 }
 .centertxt {
-	width: 72%;
-	margin: 0 auto;
+	width: 87%;
+	margin: 0 10.8em;
 }
 .text-light
 {
@@ -95,7 +95,7 @@ body {
     position: relative;
     display: inline-block;
     margin: 1em;
-    width: 230px;
+    /*width: 230px;*/
     height: 230px;
     text-align: center;
 }
@@ -492,9 +492,10 @@ textarea
 	background: #EB4334;
 }
 .right-form h4{
-	color:#CDCDCD;
+	color:#ffd700;
 	font-size: 1em;
 	font-weight: 600;
+	padding-left: 2%;
 }
 .right-form p{
 	color:#323232;
@@ -642,12 +643,13 @@ textarea
 .group_3_social img{
 	float:left;
 	height : 250px;
-	padding : 8px 8px;
-	margin-left: 25px;
+	padding : 2%;
+	margin-left: 3%;
 	-webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
+
 /******response***********/
 @media only screen and (max-width: 1440px)
 {
@@ -665,7 +667,17 @@ textarea
 	height: 300px;
 	}
 	.centertxt {
-	width: 100%;
+	width: 60%;
+	margin: 0px auto;
+	}
+
+	.group_3_social {
+		margin: 0 -1.5em;
+	}
+
+	.group_3_social img {
+		padding: 0;
+		margin-left: 5%;
 	}
 }
 @media only screen and (max-width: 1280px)
@@ -836,6 +848,7 @@ textarea
 	}
 	.centertxt {
 	width: 60%;
+	margin: 0px 4.8em;
 	}
 	.chart {
 	width: 200px;
